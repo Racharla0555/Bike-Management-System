@@ -1,0 +1,23 @@
+{%extends 'home.html'%}
+{%block main%}
+<style>
+.a
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+</style>
+
+    {%for i in cu%}
+        <div class="a"><img src="{{i.image.url}}" class="image-book-1" width=500px height=500px/></div>
+        <div class="a">Name : {{i.name}}</div>
+        <div class="a">Model : {{i.model}}</div>
+        <div class="a" >Price : {{i.price}}</div>
+        <div class="a">Mileage : {{i.mileage}}</div>
+    </tr>
+    {%endfor%}
+</table>
+{%endblock%}
